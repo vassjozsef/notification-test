@@ -1,5 +1,10 @@
-const {getNotificationState, getSessionState, getDoNotDisturb} = require('macos-notification-state');
+const {getSessionState, getDoNotDisturb} = require('macos-notification-state');
+const {getNotificationState} = require('windows-notification-state');
 
-console.log(getDoNotDisturb());
-console.log(getNotificationState());
-console.log(getSessionState());
+if (process.platform === 'win32') {
+  console.log(getNotificationState());
+}
+if (process.platform === 'darwin') {
+  console.log(getDoNotDisturb());
+  console.log(getSessionState());
+}

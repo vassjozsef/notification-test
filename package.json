@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "macos-notification-state": "2.0.1"
+    "macos-notification-state": "2.0.1",
+    "windows-notification-state": "2.0.0"
   },
   "devDependencies": {
     "node-gyp": "9.1.0"
